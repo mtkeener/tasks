@@ -1,0 +1,52 @@
+.analysis {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters select,
+.filters input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.summary {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.summary h3,
+.summary h4 {
+  margin-top: 0;
+}
+
+.summary ul {
+  padding-left: 20px;
+}
+
+.chart {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters select,
+  .filters input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
