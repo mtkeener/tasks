@@ -1,5 +1,5 @@
-# Use a lightweight Node image
-FROM node:14-alpine AS build
+# Use Node.js as the base image
+FROM node:14
 
 # Set working directory
 WORKDIR /app
@@ -8,22 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
+RUN npm install
 
 # Copy the rest of the code
 COPY . .
 
-# Build the app
-RUN npm run build
+# Expose port 3000
+EXPOSE 3000
 
-# Use Nginx to serve the static files
-FROM nginx:alpine
-
-# Copy the build output to replace the default nginx contents.
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Expose port 80
-EXPOSE 80
-
-# Start Nginx server
-CMD ["nginx", "-g", "daemon off;"]
+# Start the React development server
+CMD ["npm", "start"]

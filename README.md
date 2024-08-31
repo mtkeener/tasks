@@ -12,7 +12,7 @@ Create .env file with content [VITE on Geeks for Geeks](https://www.geeksforgeek
 
 ```conf
 //.env
-VITE_BASE_API_URL=http://tasks-api.keenervics.com
+VITE_BASE_API_URL=http://tasks-api.yourdomain.com
 VITE_APP_NAME=Tasks
 ```
 

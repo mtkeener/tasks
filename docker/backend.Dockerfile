@@ -1,5 +1,5 @@
-# Use a lightweight Node image
-FROM node:14-alpine
+# Use Node.js as the base image
+FROM node:14
 
 # Set working directory
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
+RUN npm install
 
 # Copy the rest of the code
 COPY . .
@@ -16,5 +16,5 @@ COPY . .
 # Expose port 3001
 EXPOSE 3001
 
-# Start the server
-CMD ["node", "express-server.js"]
+# Start the Express server
+CMD ["npm", "start"]
