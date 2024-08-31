@@ -6,7 +6,7 @@ import DayView from './components/DayView';
 import Analysis from './components/Analysis';
 import NewTaskButton from './components/NewTaskButton';
 
-const API_BASE_URL = import.meta.env.VITE_MY_VARIABLE;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const App = () => {
   const [tasks, setTasks] = useState([]);

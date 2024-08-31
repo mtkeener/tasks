@@ -5,15 +5,15 @@
 Install npm for the machine required (Windows for development, or Linux for development or hosting)
 
 ```bash
-npm create vite@latest my-react-app-env --template
+npm create vite@latest tasks-env --template
 ```
 
 Create .env file with content [VITE on Geeks for Geeks](https://www.geeksforgeeks.org/how-to-load-environment-variables-from-env-file-using-vite/#):
 
 ```conf
 //.env
-VITE_API_URL=https://geeksforgeeks.org/api
-VITE_APP_NAME=MyViteApp
+VITE_BASE_API_URL=http://tasks-api.keenervics.com
+VITE_APP_NAME=Tasks
 ```
 
 ## Initial prompt

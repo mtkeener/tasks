@@ -10,7 +10,7 @@ services:
     depends_on:
       - backend
     environment:
-      - REACT_APP_API_URL=http://api.yourdomain.com
+      - REACT_APP_API_URL=http://tasks-api.yourdomain.com
 
   backend:
     build:
