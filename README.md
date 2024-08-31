@@ -1,7 +1,24 @@
 # tasks - a custom app for tracking completed tasks
 
+## Environment tasks
+
+Install npm for the machine required (Windows for development, or Linux for development or hosting)
+
+```bash
+npm create vite@latest my-react-app-env --template
+```
+
+Create .env file with content [VITE on Geeks for Geeks](https://www.geeksforgeeks.org/how-to-load-environment-variables-from-env-file-using-vite/#):
+
+```conf
+//.env
+VITE_API_URL=https://geeksforgeeks.org/api
+VITE_APP_NAME=MyViteApp
+```
+
 ## Initial prompt
 
+***
 Write a web app for task tracking using ReactJS and SQLite. It should be accessible and formatted well on tablet and mobile browsers. The unit of tracking should be an instance of the task, and a default amount of time assigned per instance. That instance time in minutes may be updated for a specific instance at a date and times.
 
 A plus button on the bottom right of the page should initiate a new task at the current date and time, with a drop down menu for the task type to choose. One option in the task type drop down should be a “New Task”
