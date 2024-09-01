@@ -64,3 +64,66 @@
     min-height: 60px;
   }
 }
+
+.day-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hourly-schedule {
+  display: flex;
+  flex-direction: column;
+}
+
+.hour-slot {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  min-height: 60px;
+}
+
+.hour-label {
+  width: 60px;
+  padding: 10px;
+  font-weight: bold;
+  border-right: 1px solid #e0e0e0;
+}
+
+.hour-tasks {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.task-item {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.task-item form {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item form input,
+.task-item form select {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.task-item form button {
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .hour-slot {
+    flex-direction: column;
+  }
+
+  .hour-label {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}

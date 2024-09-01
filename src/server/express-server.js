@@ -1,21 +1,13 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const {
-  initializeDatabase,
-  addTask,
-  getTasks,
-  updateTask,
-  deleteTask,
-  addUser,
-  getUsers
-} = require('./database');
+import express from 'express';
+import cors from 'cors';
+import { initializeDatabase, addTask, getTasks, updateTask, deleteTask, addUser, getUsers } from './sqlite-database.js';
 
 const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true}));
+app.use(express.json()) // To parse the incoming requests with JSON payloads
 
 // Initialize database
 initializeDatabase();

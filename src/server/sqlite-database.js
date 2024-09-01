@@ -1,7 +1,8 @@
-const sqlite3 = require('sqlite3').verbose();
-const path = require('path');
+import sqlite3 from 'sqlite3';
+import { resolve as _resolve } from 'path';
 
-const dbPath = path.resolve(__dirname, 'tasktracker.sqlite');
+//const sqlite3 = sqlite3()
+const dbPath = 'tasks.db';
 
 let db;
 
@@ -137,7 +138,7 @@ async function getUsers() {
   });
 }
 
-module.exports = {
+export {
   initializeDatabase,
   addTask,
   getTasks,

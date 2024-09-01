@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import axios from 'axios';
-import Calendar from './components/Calendar';
-import DayView from './components/DayView';
+import { Calendar, DayView } from './components/Calendar';
 import Analysis from './components/Analysis';
 import NewTaskButton from './components/NewTaskButton';
 

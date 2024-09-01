@@ -6,6 +6,12 @@ Install npm for the machine required (Windows for development, or Linux for deve
 
 ```bash
 npm create vite@latest tasks-env --template
+
+npm i --save-dev @types/express
+
+npm i --save-dev @types/cors
+
+npm i --save-dev @types/sqlite3
 ```
 
 Create .env file with content [VITE on Geeks for Geeks](https://www.geeksforgeeks.org/how-to-load-environment-variables-from-env-file-using-vite/#):
