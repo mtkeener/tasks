@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-import { Calendar, DayView } from './components/Calendar';
-import Analysis from './components/Analysis';
-import NewTaskButton from './components/NewTaskButton';
+import { Calendar, DayView } from './calendar.jsx';
+import Analysis from './analysis.jsx';
+import NewTaskButton from './newtaskbutton.jsx';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL;
 
@@ -62,7 +62,7 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-        <Switch>
+        <Routes>
           <Route exact path="/" component={() => <Calendar tasks={tasks} />} />
           <Route path="/day/:date" component={({ match }) => (
             <DayView
@@ -72,7 +72,7 @@ const App = () => {
             />
           )} />
           <Route path="/analysis" component={() => <Analysis tasks={tasks} />} />
-        </Switch>
+        </Routes>
         <NewTaskButton onAddTask={handleAddTask} taskTypes={taskTypes} users={users} />
       </div>
     </Router>
