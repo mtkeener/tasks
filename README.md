@@ -14,12 +14,11 @@ npm i --save-dev @types/cors
 npm i --save-dev @types/sqlite3
 ```
 
-Create .env file with content [VITE on Geeks for Geeks](https://www.geeksforgeeks.org/how-to-load-environment-variables-from-env-file-using-vite/#):
+Create .env file with content at ./src/client/.env:
 
 ```conf
-//.env
-VITE_BASE_API_URL=http://tasks-api.yourdomain.com
-VITE_APP_NAME=Tasks
+REACT_APP_API_URL=http://tasks-api.yourdomain.com
+REACT_APP_APP_NAME=Tasks
 ```
 
 ## Initial prompt

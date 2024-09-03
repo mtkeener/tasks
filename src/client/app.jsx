@@ -5,7 +5,7 @@ import { Calendar, DayView } from './components/Calendar';
 import Analysis from './components/Analysis';
 import NewTaskButton from './components/NewTaskButton';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
